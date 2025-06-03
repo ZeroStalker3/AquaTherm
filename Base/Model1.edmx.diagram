@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1c534ad18be2474097b3841ec37018c5" Name="Diagram1">
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.User" Width="1.5" PointX="4.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.Клиенты" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.Платежи" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.ПоказанияСчетчиков" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.Счетчики" Width="1.5" PointX="6" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.ТипыСчетчиков" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.vw_ClientMeterReading" Width="1.5" PointX="6.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBTeplovodokanalModel.vw_ClientsWithOutstandingPayments" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <AssociationConnector Association="DBTeplovodokanalModel.FK__Платежи__idclien__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTeplovodokanalModel.FK__Счетчики__idclie__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTeplovodokanalModel.FK__Показания__idCou__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="DBTeplovodokanalModel.FK_Счетчики_ТипыСчетчиков" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,79 @@
+﻿<Window x:Class="AquaTherm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AquaTherm"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource BackgroundBrush}"
+        Title="Тепловодоканал" Height="470" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="31*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Offset="0"/>
+                    <GradientStop Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <StackPanel>
+                <Button Height="30" HorizontalAlignment="Left" Content="🌙" Background="Black" Name="BtnChangeTheme" Click="BtnChangeTheme_Click" VerticalAlignment="Top" Margin="5" Width="30"/>
+
+                <StackPanel
+                VerticalAlignment="Top" Margin="0,80,0,0">
+
+
+                    <Button x:Name="btnClient"  Click="btnClient_Click" >
+                        <StackPanel>
+                            <TextBlock Text="Клиенты"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="BtnReader"  Click="BtnReader_Click">
+                        <StackPanel>
+                            <TextBlock Text="Счетчики" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="BtnMeter" Click="BtnMeter_Click" >
+                        <StackPanel>
+                            <TextBlock Text="Показания" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="BtnPaiment" Click="BtnPaiment_Click">
+                        <StackPanel>
+                            <TextBlock Text="Платежи" />
+                        </StackPanel>
+                    </Button>
+
+                    <Button x:Name="btnExit" VerticalAlignment="Bottom" Click="btnExit_Click">
+                        <StackPanel>
+                            <TextBlock Text="Выход" />
+                        </StackPanel>
+                    </Button>
+
+                </StackPanel>
+            </StackPanel>
+
+        </Border>
+        <Border Grid.Column="1">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="1,0" EndPoint="0,1">
+                    <GradientStop  Offset="0"/>
+                    <GradientStop Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Frame
+                x:Name="MainFrame"
+                Grid.Column="1"
+                NavigationUIVisibility="Hidden"
+                />
+        </Border>
+    </Grid>
+</Window>

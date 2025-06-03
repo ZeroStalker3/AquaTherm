@@ -1,0 +1,35 @@
+﻿<Page x:Class="AquaTherm.Pages.ReaderPages"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AquaTherm.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="{DynamicResource BackgroundBrush}"
+      Title="ReaderPages">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="addBtn" Padding="35,0,0,0" Content="Добавить"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,25,0,0" Click="addBtn_Click"/>
+                <Button x:Name="printbtn" Padding="35,0,0,0" Content="Печать" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,25,0,0" Click="printbtn_Click"/>
+                <Button x:Name="deletebtn"  Padding="35,0,0,0" Content="Удалить" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="15,25,0,0" Click="deletebtn_Click"/>
+            </StackPanel>
+
+            <DataGrid Margin="0,20,0,0" x:Name="GridView" AutoGenerateColumns="False" FontSize="12" ScrollViewer.CanContentScroll="True"
+                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      Height="350" Width="620" SelectionChanged="GridView_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="*" Header="Фамилия Клиента" Binding="{Binding Клиенты.Фамилия}"/>
+                        <DataGridTextColumn Width="*" Header="Номер счетчика" Binding="{Binding НомерСчетчика}"/>
+                        <DataGridTextColumn Width="*" Header="Тип" Binding="{Binding ТипыСчетчиков.Название}"/>
+                        <DataGridTextColumn Width="*" Header="Дата установки" Binding="{Binding ДатаУстановки}"/>
+                        <DataGridTextColumn Width="*" Header="Состояние" Binding="{Binding Состояние}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+        </StackPanel>
+    </Grid>
+</Page>
