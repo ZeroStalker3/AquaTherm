@@ -37,6 +37,7 @@ namespace AquaTherm.Pages.AddPages
 
                     var newUser = new User
                     {
+                        Name = txbName.Text,
                         Login = login,
                         Password = hashedPassword
                     };

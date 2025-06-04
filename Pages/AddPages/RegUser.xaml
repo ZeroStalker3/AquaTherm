@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AquaTherm.Pages.AddPages"
         mc:Ignorable="d"
         Title="Регистрация" 
-        Width="300" Height="555"
+        Width="300" Height="645"
         WindowStartupLocation="CenterScreen"
         Background="{DynamicResource BackgroundBrush}"
         ResizeMode="NoResize">
@@ -18,7 +18,10 @@
 
         <StackPanel x:Name="LoginSlide" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,120,0,0" Width="250">
 
-            <TextBlock Text="Логин" HorizontalAlignment="Center" FontSize="25"  Margin="0,60,0,0"/>
+            <TextBlock Text="Имя" HorizontalAlignment="Center" FontSize="25"  Margin="0,60,0,0"/>
+            <TextBox FontSize="20" FontWeight="DemiBold" x:Name="txbName" Height="40"></TextBox>
+
+            <TextBlock Text="Логин" HorizontalAlignment="Center" FontSize="25" />
             <TextBox FontSize="20" FontWeight="DemiBold" x:Name="txbLogin" Height="40"></TextBox>
 
             <TextBlock Text="Пароль" HorizontalAlignment="Center" FontSize="25" />
