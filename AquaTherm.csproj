@@ -75,6 +75,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Base\EncryptionHelper.cs" />
     <Compile Include="Base\FrameApp.cs" />
     <Compile Include="Base\Model1.Context.cs">
       <AutoGen>True</AutoGen>

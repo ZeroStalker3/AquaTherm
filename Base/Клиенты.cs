@@ -27,6 +27,11 @@ namespace AquaTherm.Base
         public string Адрес { get; set; }
         public string Телефон { get; set; }
         public string Email { get; set; }
+        public string ТелефонMasked => "Скрыто";
+        public string EmailMasked => "Скрыто";
+    
+        public string ТелефонOriginal => EncryptionHelper.DecryptPreserve(Телефон);
+        public string EmailOriginal => EncryptionHelper.DecryptPreserve(Email);
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Платежи> Платежи { get; set; }

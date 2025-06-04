@@ -24,8 +24,8 @@
                     <DataGridTextColumn Width="*" Header="Имя" Binding="{Binding Имя}"/>
                     <DataGridTextColumn Width="*" Header="Фамилия" Binding="{Binding Фамилия}"/>
                     <DataGridTextColumn Width="*" Header="Адрес" Binding="{Binding Адрес}"/>
-                    <DataGridTextColumn Width="*" Header="Телефон" Binding="{Binding Телефон}"/>
-                    <DataGridTextColumn Width="*" Header="Почта" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Width="*" Header="Телефон" Binding="{Binding ТелефонOriginal}"/>
+                    <DataGridTextColumn Width="*" Header="Почта" Binding="{Binding EmailOriginal}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </StackPanel>
