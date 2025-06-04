@@ -33,20 +33,29 @@ namespace AquaTherm.Pages
                 string login = txbLogin.Text;
                 string password = PasswordHelper.Hash(txbPass.Password);
 
-                var users = OdbConnectHelper.entobj.User
-                    .FirstOrDefault(x => x.Login == login && x.Password == password);
+                // Получаем пользователей из БД и переводим в коллекцию в памяти,
+                // чтобы использовать метод Equals с указанием StringComparison.Ordinal
+                var user = OdbConnectHelper.entobj.User
+                    .AsEnumerable()
+                    .FirstOrDefault(x => x.Login.Equals(login, StringComparison.Ordinal));
 
-                if (users != null)
+                if (user != null)
                 {
-                    MainWindow mainwind = new MainWindow();
-                    mainwind.Show();
-                    this.Close();
+                    if (user.Password.Equals(password, StringComparison.Ordinal))
+                    {
+                        MainWindow mainwind = new MainWindow();
+                        mainwind.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный пароль", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Такого пользователя нет");
+                    MessageBox.Show("Такого пользователя нет", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
-
             }
             catch (Exception ex)
             {
